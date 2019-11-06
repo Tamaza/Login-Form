@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginForm.controller.RegistrationFXMLController">
+  <children>
+    <GridPane fx:id="grid" hgap="5.0" layoutX="45.0" layoutY="36.0" prefHeight="403.0" prefWidth="541.0" vgap="15.0" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="36.0">
+      <children>
+        <Label fx:id="nameLabel" text="Name" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+          <font>
+            <Font name="Sylfaen" size="16.0" fx:id="x1" />
+          </font>
+          <GridPane.margin>
+            <Insets right="5.0" fx:id="x2" />
+          </GridPane.margin>
+        </Label>
+        <Label fx:id="surnameLabel" font="$x1" text="Surname" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Label fx:id="usernameLabel" font="$x1" text="User name" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <Label fx:id="passwordLabel" font="$x1" text="Password" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+        <Label fx:id="repeatPasswordLabel" text="Repeat Password" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+          <font>
+            <Font name="Sylfaen" size="14.0" fx:id="x4" />
+          </font>
+        </Label>
+        <Label fx:id="mailLabel" font="$x1" text="e-mail" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+        <Label fx:id="numberLabel" font="$x1" text="Phone number" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+        <Label fx:id="genderLabel" font="$x1" text="Gender" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+        <Label fx:id="dateLabel" font="$x1" text="Birth date" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.margin="$x2" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+        <TextField fx:id="nameField" prefWidth="200.0" style="-fx-font-family:sylfaen;&#10;-fx-font-syze:16;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <TextField fx:id="surnameField" prefWidth="200.0" style="-fx-font-family:sylfaen;&#10;-fx-font-syze:16;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <TextField fx:id="usernameField" prefWidth="200.0" style="-fx-font-family:sylfaen;&#10;-fx-font-syze:16;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <PasswordField fx:id="passwordField" prefWidth="200.0" style="-fx-font-family:sylfaen;&#10;-fx-font-syze:16;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <PasswordField fx:id="repeatPasswordField" prefWidth="200.0" style="-fx-font-family:sylfaen;&#10;-fx-font-syze:16;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <TextField fx:id="mailField" prefWidth="200.0" style="-fx-font-family:sylfaen;&#10;-fx-font-syze:16;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <TextField fx:id="numberField" prefWidth="200.0" style="-fx-font-family:sylfaen;&#10;-fx-font-syze:16;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <ComboBox fx:id="genderComboBox" prefHeight="21.0" prefWidth="133.0" style="-fx-font-family:sylfaen;" GridPane.columnIndex="1" GridPane.rowIndex="8" GridPane.valignment="CENTER">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <HBox prefHeight="22.0" prefWidth="129.0" GridPane.columnIndex="1" GridPane.rowIndex="9" GridPane.valignment="BOTTOM">
+          <children>
+            <ComboBox fx:id="yearComboBox" minHeight="20.0" minWidth="40.0" prefHeight="20.0" prefWidth="102.0" style="-fx-font-family:sylfaen;">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+              <HBox.margin>
+                <Insets fx:id="x3" />
+              </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="monthComboBox" minHeight="19.0" minWidth="31.0" prefHeight="20.0" prefWidth="118.0" style="-fx-font-family:sylfaen;" HBox.margin="$x3">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+            </ComboBox>
+          </children>
+        </HBox>
+        <Button fx:id="registerButton" font="$x1" mnemonicParsing="false" onAction="#actionOnRegisterButton" text="Registration" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+        <Label fx:id="titleLabel" text="Please fill al the fields" textFill="#990049" GridPane.columnIndex="0" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="0" GridPane.valignment="CENTER">
+          <font>
+            <Font name="Sylfaen" size="22.0" />
+          </font>
+        </Label>
+        <Label id="repeatPasswordLabel" fx:id="errorNameLabel" disable="false" font="$x4" text="" textFill="RED" visible="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <Label id="repeatPasswordLabel" fx:id="errorSurnameLabel" disable="false" font="$x4" text="" textFill="RED" visible="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Label id="repeatPasswordLabel" fx:id="errorUsernameLabel" font="$x4" text="" textFill="RED" visible="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <Label id="repeatPasswordLabel" fx:id="errorPasswordLabel" font="$x4" text="" textFill="RED" visible="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+        <Label id="repeatPasswordLabel" fx:id="errorRepeatPasswordLabel" font="$x4" text="" textFill="RED" visible="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+        <Label id="repeatPasswordLabel" fx:id="errorMailLabel" font="$x4" text="" textFill="RED" visible="true" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+        <Label id="repeatPasswordLabel" fx:id="errorNumberLabel" font="$x4" text="" textFill="RED" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+      <ComboBox fx:id="dayComboBox" minHeight="20.0" minWidth="40.0" prefHeight="20.0" prefWidth="115.0" style="-fx-font-family:sylfaen;" GridPane.columnIndex="2" GridPane.rowIndex="9">
+        <items>
+          <FXCollections fx:factory="observableArrayList">
+            <String fx:value="Item 1" />
+            <String fx:value="Item 2" />
+            <String fx:value="Item 3" />
+          </FXCollections>
+        </items>
+      </ComboBox>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="147.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="220.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="164.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="24.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </children>
+  <stylesheets>
+    <URL value="@registrationfxml.css" />
+  </stylesheets>
+</AnchorPane>
